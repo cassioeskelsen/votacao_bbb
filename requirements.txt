@@ -1,0 +1,8 @@
+fastapi
+locust
+gunicorn
+sanic
+sanic-redis
+aioredis
+azure-storage-blob
+aiohttp
