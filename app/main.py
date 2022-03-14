@@ -25,7 +25,7 @@ async def vote(request):
 
     return response.json(
         {'message': 'Voto Recebido'},
-        status=200
+        status=202
     )
 
 
