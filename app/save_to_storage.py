@@ -31,11 +31,11 @@ async def main() -> dict:
                     chunk = chunk + json.loads(item)
                 else:
                     break
-            if chunk:
+            if not chunk:
+                return
+            else:
                 block_id = str(uuid.uuid4())
                 container_client.upload_blob(name=block_id, data=json.dumps(chunk))
-            else:
-                return
 
 
 if __name__ == "__main__":
