@@ -5,9 +5,7 @@ import aioredis
 import json
 
 redis_server = "redis://20.226.17.17"
-redis = aioredis.from_url(
-    redis_server, encoding="utf-8", decode_responses=True
-)
+redis = aioredis.from_url(redis_server, encoding="utf-8", decode_responses=True)
 
 total_votes = 0
 
