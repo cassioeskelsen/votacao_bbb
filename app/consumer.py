@@ -10,16 +10,6 @@ redis = aioredis.from_url(redis_server, encoding="utf-8", decode_responses=True)
 total_votes = 0
 
 
-async def list_size() -> int:
-    async with redis.client() as conn:
-        return await conn.llen("votos")
-
-
-async def get_result() -> dict:
-    async with redis.client() as conn:
-        result = await conn.hgetall('hash')
-
-
 async def main():
     global total_votes
     async with redis.client() as conn:
